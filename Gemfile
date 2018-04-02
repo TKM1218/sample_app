@@ -35,6 +35,7 @@ gem 'jbuilder', '2.7.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13', groups: %w(test development), require: false
+  gem 'pg', groups: %w(production), require: false
   gem 'byebug', '9.0.6', platform: :mri
   # Adds support for Capybara system testing and selenium driver
   #gem 'capybara', '~> 2.13'
