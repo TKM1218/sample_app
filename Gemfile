@@ -34,8 +34,9 @@ gem 'jbuilder', '2.7.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13', groups: %w(test development), require: false
-  gem 'pg', groups: %w(production), require: false
+  #gem 'sqlite3', '1.3.13', groups: %w(test development), require: false
+  #gem 'pg', groups: %w(production), require: false
+  gem 'sqlite3', groups: %w(test development), require: false
   gem 'byebug', '9.0.6', platform: :mri
   # Adds support for Capybara system testing and selenium driver
   #gem 'capybara', '~> 2.13'
@@ -60,6 +61,7 @@ end
 
 group :production do
   #gem 'pg', '0.18.4', groups: %w(production), require: false
+  gem 'pg', groups: %w(production), require: false
   gem 'rails_12factor'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
