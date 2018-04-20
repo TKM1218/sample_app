@@ -8,6 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.4'
+gem 'minitest', '5.10.1'
+gem 'bcrypt', '3.1.11'
 # Use Puma as the app server
 gem 'bootstrap-sass', '3.3.7'
 gem 'puma', '3.9.1'
@@ -39,6 +41,7 @@ group :development, :test do
   #gem 'pg', groups: %w(production), require: false
   gem 'sqlite3', groups: %w(test development), require: false
   gem 'byebug', '9.0.6', platform: :mri
+  gem 'pry-rails'
   # Adds support for Capybara system testing and selenium driver
   #gem 'capybara', '~> 2.13'
   #gem 'selenium-webdriver'
