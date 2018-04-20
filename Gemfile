@@ -8,7 +8,10 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.4'
+gem 'minitest', '5.10.1'
+gem 'bcrypt', '3.1.11'
 # Use Puma as the app server
+gem 'bootstrap-sass', '3.3.7'
 gem 'puma', '3.9.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.6'
@@ -34,8 +37,11 @@ gem 'jbuilder', '2.7.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
+  #gem 'sqlite3', '1.3.13', groups: %w(test development), require: false
+  #gem 'pg', groups: %w(production), require: false
+  gem 'sqlite3', groups: %w(test development), require: false
   gem 'byebug', '9.0.6', platform: :mri
+  gem 'pry-rails'
   # Adds support for Capybara system testing and selenium driver
   #gem 'capybara', '~> 2.13'
   #gem 'selenium-webdriver'
@@ -58,7 +64,9 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.18.4'
+  #gem 'pg', '0.18.4', groups: %w(production), require: false
+  gem 'pg', groups: %w(production), require: false
+  gem 'rails_12factor'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
